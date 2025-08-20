@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chef Francis Capellan | Inicio</title>
+
+  <!-- Bootstrap CSS + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Hoja de estilos -->
+  <link href="assets/css/styles.css" rel="stylesheet" />
+</head>
+<body class="d-flex flex-column min-vh-100 bg-dark text-light">
+
+  <!-- ================= HEADER ================= -->
+  <header class="bg-black border-bottom">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black" role="navigation" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <img src="https://rourbina.github.io/chef-francis-data/assets/img/galeria/logo.png" alt="Chef Francis Logo" width="40" height="40" class="d-inline-block align-text-top" loading="lazy">
+          <span class="fw-bold text-warning">Chef Francis Capellan</span>
+        </a>
+
+        <!-- ÚNICO toggler (dentro del nav) -->
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Mostrar navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active text-warning" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="menu.html">Menú</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicio.html">Nuestros servicios</a></li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="masMenu" role="button"
+                 data-bs-toggle="dropdown" aria-expanded="false">Más</a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="masMenu">
+                <li><a class="dropdown-item" href="historia.html">Historia</a></li>
+                <li><a class="dropdown-item" href="galeria.html">Galería</a></li>
+                <li><a class="dropdown-item" href="multimedia.html">Multimedia</a></li>
+                <li><a class="dropdown-item" href="ubicacion.html">Ubicación</a></li>
+                <li><a class="dropdown-item" href="acerca.html">Acerca de</a></li>
+                <li><a class="dropdown-item" href="autor.html">Información del autor</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ======= CAROUSEL (Home) ======= -->
+    <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel" aria-label="Galería destacada">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://rourbina.github.io/chef-francis-data/assets/img/galeria/hero-bg.png" class="d-block w-100" alt="Platos y servicio del chef" loading="lazy">
+          <div class="carousel-caption text-start">
+            <h2 class="fw-bold text-warning">Sabor y calidad</h2>
+            <p class="mb-3">Conoce nuestros servicios y promociones.</p>
+            <a class="btn btn-warning text-dark" href="servicio.html">Ver servicio</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://rourbina.github.io/chef-francis-data/assets/img/galeria/galeria.png" class="d-block w-100" alt="Collage de fotografías de la cocina" loading="lazy">
+          <div class="carousel-caption">
+            <h2 class="fw-bold text-warning">Galería</h2>
+            <p class="mb-3">Explora nuestras mejores fotos.</p>
+            <a class="btn btn-outline-light" href="galeria.html">Ver galería</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://rourbina.github.io/chef-francis-data/assets/img/galeria/ubicacion.png" class="d-block w-100" alt="Mapa de ubicación" loading="lazy">
+          <div class="carousel-caption text-end">
+            <h2 class="fw-bold text-warning">Ubicación</h2>
+            <p class="mb-3">Encuéntranos y usa tu geolocalización.</p>
+            <a class="btn btn-outline-light" href="ubicacion.html">¿Cómo llegar?</a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev" aria-label="Anterior">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next" aria-label="Siguiente">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main class="flex-grow-1">
+    <!-- Tarjetas principales -->
+    <section class="py-5 bg-dark">
+      <div class="container">
+        <div class="row g-4">
+
+         <!-- Promoción (dinámica) -->
+
+         <article class="col-12 col-md-6 col-xl-4">
+  <div class="card h-100 bg-black text-light border-warning shadow-sm">
+    <div class="card-body">
+      <h3 class="h5 text-warning mb-3">Promociones de la semana</h3>
+      <div id="promoHome" class="d-grid gap-3">
+        <!-- Aquí se dibujan las promos desde main.js -->
+      </div>
+    </div>
+  </div>
+</article>
+
+          <!-- Reserva / Cotiza -->
+          <article class="col-12 col-md-6 col-xl-4">
+            <div class="card h-100 bg-black text-light border-warning shadow-sm">
+              <img src="https://rourbina.github.io/chef-francis-data/assets/img/galeria/actividad2.jpg" class="card-img-top" alt="Reservar cita o solicitar cotización" loading="lazy">
+              <div class="card-body">
+                <h3 class="h5 text-warning">Reserva / Cotiza</h3>
+                <p>Agenda una cita con la chef o solicita una cotización rápida.</p>
+                <button class="btn btn-sm btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#modalReserva">
+                  Reservar / Cotizar
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Destacado -->
+          <aside class="col-12 col-md-6 col-xl-4">
+            <div class="card h-100 bg-black text-light border-warning shadow-sm">
+              <img src="https://rourbina.github.io/chef-francis-data/assets/img/galeria/monster-papas.jpg" class="card-img-top" alt="Monster Papas" loading="lazy">
+              <div class="card-body">
+                <h3 class="h5 text-warning">Destacado de la semana</h3>
+                <p>Prueba nuestro <strong>Monster Papas</strong> con salsa de la casa y pico de gallo.</p>
+                <button class="btn btn-sm btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalDestacado">
+                  Ver detalles
+                </button>
+              </div>
+            </div>
+          </aside>
+
+        </div><!-- /row -->
+      </div><!-- /container -->
+    </section><!-- /section tarjetas -->
+
+    <!-- Barra de redes -->
+    <section class="py-4 bg-black border-top border-warning">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+          <div class="d-flex align-items-center gap-2">
+            <span class="badge text-bg-dark border border-warning">SÍGUENOS EN</span>
+            <a class="btn btn-sm btn-outline-light" aria-label="Instagram" href="https://www.instagram.com/chef_francis_capellan?igsh=MWx0ZDU1NXE2NTdyZA==" target="_blank" rel="noopener">
+              <i class="bi bi-instagram fs-5"></i>
+            </a>
+          </div>
+          <a class="btn btn-success" href="https://wa.me/50687625662" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+            <i class="bi bi-whatsapp me-1"></i> Envíanos un WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navegación secuencial -->
+    <section class="py-4 bg-black border-top border-warning">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <a class="btn btn-outline-light" href="autor.html" aria-label="Ir a la página anterior">
+          <i class="bi bi-arrow-left"></i> Página anterior
+
+        </a>
+        <span class="text-warning small text-center">
+          Secuencia: Autor → Home → Menú → Contacto → Servicio → Historia → Galería → Multimedia → Ubicación → Acerca → Autor
+        </span>
+        <a class="btn btn-warning text-dark" href="menu.html" aria-label="Ir a la siguiente página">
+          Siguiente página <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="mt-auto py-4 bg-black text-light border-top border-warning">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <small class="text-warning">© <span id="year"></span> Chef Privado. Todos los derechos reservados.</small>
+      <ul class="nav">
+       
+        <li class="nav-item"><a class="nav-link px-2 text-light" href="politica-privacidad.html">Privacidad</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-light" href="terminos.html">Términos</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-light" href="cookies.html">Cookies</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-light" href="aviso-legal.html">Aviso Legal</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- ================= MODALES ================= -->
+  <!-- Promoción -->
+  <!-- Modal Oferta (antes id="modalPromo") -->
+<div class="modal fade" id="modalOferta" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-light border-warning">
+      <div class="modal-header">
+        <h5 class="modal-title text-warning">Promoción de la semana</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <img src="https://rourbina.github.io/chef-francis-data/assets/img/galeria/meni3.jpg"
+             class="img-fluid mb-3 rounded"
+             alt="Promoción de la semana"
+             loading="lazy" width="1000" height="600"
+             onerror="this.onerror=null; this.src='https://rourbina.github.io/chef-francis-data/assets/img/galeria/placeholder.jpg';">
+        <p class="mb-2">🌟 Descuento especial de un 5% en combos seleccionados.</p>
+        <p class="mb-0">✅ Válido hasta el domingo.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Reserva / Cotización -->
+  <div class="modal fade" id="modalReserva" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-light border-warning">
+        <div class="modal-header">
+          <h5 class="modal-title text-warning">Reserva / Cotización</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+
+        <form id="formReserva" class="needs-validation" novalidate>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label">Nombre completo</label>
+              <input type="text" name="nombre" class="form-control" required>
+              <div class="invalid-feedback">Ingrese su nombre.</div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Teléfono / WhatsApp</label>
+              <input type="tel" name="tel" class="form-control" required>
+              <div class="invalid-feedback">Ingrese un número de contacto.</div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Tipo</label>
+                <select name="tipo" class="form-select" required>
+                  <option value="" selected disabled>Seleccione</option>
+                  <option>Cita</option>
+                  <option>Cotización</option>
+                </select>
+                <div class="invalid-feedback">Seleccione una opción.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Fecha (opcional)</label>
+                <input type="date" name="fecha" class="form-control">
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-md-6">
+                <label class="form-label">Personas (opcional)</label>
+                <input type="number" name="personas" min="1" class="form-control" placeholder="ej. 20">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Servicio</label>
+                <select name="servicio" class="form-select" required>
+                  <option value="" selected disabled>Seleccione</option>
+                  <option>Chef privado en casa</option>
+                  <option>Catering</option>
+                  <option>Desayuno sorpresa</option>
+                  <option>Tablas de quesos</option>
+                  <option>Otro</option>
+                </select>
+                <div class="invalid-feedback">Seleccione un servicio.</div>
+              </div>
+            </div>
+
+            <div class="mt-3">
+              <label class="form-label">Mensaje (opcional)</label>
+              <textarea name="nota" rows="3" class="form-control"
+                        placeholder="Ubicación, hora aproximada, requisitos…"></textarea>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-warning text-dark">Enviar por WhatsApp</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Detalle del platillo destacado -->
+  <div class="modal fade" id="modalDestacado" tabindex="-1" aria-labelledby="modalDestacadoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-black text-light border border-warning">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-warning" id="modalDestacadoLabel">Platillo destacado</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-md-5">
+              <img id="dest-img" src="https://rourbina.github.io/chef-francis-data/assets/img/galeria/monster-papas.jpg" alt="Monster Papas" class="img-fluid rounded" loading="lazy">
+            </div>
+            <div class="col-md-7">
+              <h3 id="dest-nombre" class="h4 text-warning mb-2">Monster Papas</h3>
+              <p id="dest-desc" class="mb-2">Papas con pollo, salchichas, cheddar, frijoles molidos, mayo de la casa y pico de gallo.</p>
+              <span id="dest-precio" class="badge text-bg-dark border border-warning">₡4,500</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-0">
+          <a href="menu.html" class="btn btn-warning text-dark">Ver menú completo</a>
+          <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <!--  lógica de reservas (WhatsApp) / destacado semanal -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

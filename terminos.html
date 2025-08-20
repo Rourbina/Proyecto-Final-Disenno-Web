@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Términos y Condiciones | Chef Francis</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/css/styles.css" rel="stylesheet" />
+</head>
+<body class="d-flex flex-column min-vh-100 bg-dark text-light">
+<header class="bg-black border-bottom">
+   <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-warning" href="index.html">
+          <img src="https://rourbina.github.io/chef-francis-data/assets/img/galeria/logo.png" alt="Chef Francis Logo" width="40" height="40"> <span>Chef Francis</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="menu.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link " href="politica-privacidad.html">Privacidad</a></li>
+            <li class="nav-item"><a class="nav-link active text-warning" href="terminos.html">Términos</a></li>
+            <li class="nav-item"><a class="nav-link" href="cookies.html">Cookies</a></li>
+            <li class="nav-item"><a class="nav-link" href="aviso-legal.html">Aviso Legal</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</header>
+
+<main class="container py-5 flex-grow-1">
+  <h1 class="section-title">Términos y Condiciones</h1>
+  <p class="text-light-200">Última actualización: <!-- TODO --> 2025-08-16</p>
+
+  <h2 class="h4 text-warning mt-4">1. Objeto</h2>
+  <p>Regulan el uso del sitio y la contratación de servicios de Chef Francis.</p>
+
+  <h2 class="h4 text-warning mt-4">2. Reservas y pagos</h2>
+  <ul>
+    <li>La reserva queda confirmada con un adelanto <!-- TODO: % o monto --> y el resto antes o el día del evento.</li>
+    <li>Los precios pueden variar según menú, logística y número de personas.</li>
+    <li>Cancelaciones: <!-- TODO: política de reembolso/plazos --></li>
+  </ul>
+
+  <h2 class="h4 text-warning mt-4">3. Cambios y fuerza mayor</h2>
+  <p>Podremos ajustar fechas/condiciones por causas de fuerza mayor (clima, fallas de servicios, emergencias), ofreciendo alternativas razonables.</p>
+
+  <h2 class="h4 text-warning mt-4">4. Uso del sitio</h2>
+  <p>Te comprometes a usar el sitio de manera lícita. Está prohibido introducir malware o actividades que afecten su disponibilidad.</p>
+
+  <h2 class="h4 text-warning mt-4">5. Propiedad intelectual</h2>
+  <p>Las imágenes, logos, textos y contenidos del sitio son propiedad de Chef Francis salvo indicación. No se permite su uso sin autorización.</p>
+
+  <h2 class="h4 text-warning mt-4">6. Responsabilidad</h2>
+  <p>Nos esforzamos por mantener el sitio disponible y seguro; no garantizamos ausencia total de errores. La responsabilidad por el servicio contratado se limita al monto efectivamente abonado, salvo disposición imperativa.</p>
+
+  <h2 class="h4 text-warning mt-4">7. Datos personales</h2>
+  <p>El tratamiento se rige por nuestra <a href="politica-privacidad.html">Política de Privacidad</a>.</p>
+
+  <h2 class="h4 text-warning mt-4">8. Ley aplicable y jurisdicción</h2>
+  <p>Se rigen por las leyes de Costa Rica. Cualquier disputa se someterá a los tribunales competentes de <!-- TODO: cantón/provincia -->.</p>
+</main>
+
+<!-- Navegación -->
+    <section class="py-4 mt-4 bg-black border-top border-warning">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <a class="btn btn-outline-light" href="politica-privacidad.html"><i class="bi bi-arrow-left"></i> Página anterior</a>
+        <a class="btn btn-warning text-dark" href="cookies.html">Siguiente página <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </section>
+
+<footer class="mt-auto py-4 bg-black text-light border-top border-warning">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <small class="text-warning">© <span id="year"></span> Chef Privado. Todos los derechos reservados.</small>
+      <ul class="nav">
+
+        <li class="nav-item active"><a class="nav-link px-2 text-light" href="politica-privacidad.html">Privacidad</a></li>
+        <li class="nav-item"><a class="nav-link active text-warning" href="terminos.html">Términos</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-light" href="cookies.html">Cookies</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-light" href="aviso-legal.html">Aviso Legal</a></li>
+      </ul>
+    </div>
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

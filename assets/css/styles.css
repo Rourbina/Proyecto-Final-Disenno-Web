@@ -1,0 +1,294 @@
+/* =========================================================
+   1) Variables de color y base
+   ========================================================= */
+:root{
+  /* Base */
+  --bg-100:#000;        /* fondo principal */
+  --bg-200:#0b0b0b;     /* paneles/nav/footers */
+  --text-100:#f1f5f9;   /* texto principal */
+  --text-200:#cbd5e1;   /* texto secundario */
+
+  /* Acentos */
+  --primary:#f4b400;    /* dorado */
+  --primary-600:#d99d00;/* dorado hover */
+  --accent:#34a853;     /* verde WhatsApp */
+  --accent-600:#2d8b46; /* verde hover */
+
+  /* Bordes / sombras */
+  --border:#f4b40066;   /* dorado translúcido */
+  --shadow:0 10px 20px rgba(0,0,0,.35);
+}
+
+html,body{ background:var(--bg-100); color:var(--text-100); }
+
+/* Tipografía 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+body{ font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial; }
+*/
+
+/* Utilidades globales */
+.text-light-200{ color:var(--text-200); }
+.text-warning{ color:var(--primary)!important; }
+.bg-black{ background:var(--bg-200)!important; }
+.border-warning{ border-color:var(--primary)!important; }
+.section-title{ color:var(--primary); margin-bottom:1rem; letter-spacing:.3px; }
+section{ scroll-margin-top:80px; } /* anclas con navbar fija */
+
+/* Enlaces globales */
+a{ color:var(--primary); text-decoration:none; }
+a:hover{ color:var(--primary-600); text-decoration:underline; }
+
+/* =========================================================
+   2) Navbar / Dropdown
+   (aplica a TODAS las páginas)
+   ========================================================= */
+.navbar.bg-black{ background:var(--bg-200)!important; }
+.navbar .nav-link{ color:var(--text-200); transition:color .2s; }
+.navbar .nav-link:hover,
+.navbar .nav-link:focus{ color:var(--primary); }
+.navbar-brand{ letter-spacing:.5px; }
+
+/* Dropdown oscuro coherente */
+.dropdown-menu-dark{
+  --bs-dropdown-bg:var(--bg-200);
+  --bs-dropdown-link-color:var(--text-200);
+  --bs-dropdown-link-hover-bg:#101010;
+  --bs-dropdown-link-hover-color:var(--primary);
+}
+
+/* =========================================================
+   3) Botones (consistencia con paleta)
+   ========================================================= */
+.btn-warning{ background:var(--primary); border-color:var(--primary); color:#111; }
+.btn-warning:hover{ background:var(--primary-600); border-color:var(--primary-600); color:#111; }
+
+.btn-outline-light{ color:var(--text-100); border-color:var(--text-100); }
+.btn-outline-light:hover{ background:var(--text-100); color:#111; }
+
+.btn-success{ background:var(--accent); border-color:var(--accent); }
+.btn-success:hover{ background:var(--accent-600); border-color:var(--accent-600); }
+
+/* Botón flotante genérico (si lo usas) */
+.back-to-top{ position:fixed; right:1rem; bottom:1rem; z-index:1040; box-shadow:var(--shadow); }
+
+/* =========================================================
+   4) Tarjetas / Paneles (cards)
+   (Home, Servicios, Menú)
+   ========================================================= */
+.card.bg-black{ background:var(--bg-200)!important; }
+.card.border-warning{ border:1px solid var(--border)!important; }
+.card .card-img-top{ object-fit:cover; height:180px; }
+
+/* -------- Página: Servicios (cards) -------- */
+.card.servicio{
+  border:2px solid #ffc107;          /* dorado */
+  border-radius:12px;
+  background:#121212;
+  color:#f5f5f5;
+  height:100%;
+  display:flex; flex-direction:column;
+  transition:transform .25s, box-shadow .25s, border-color .25s;
+}
+.card.servicio:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 24px rgba(255,193,7,.25);
+  border-color:#ffd24d;
+}
+.card.servicio .card-img-top{
+  height: clamp(160px, 24vw, 260px);
+  object-fit:cover; object-position:center;
+  border-bottom:1px solid rgba(255,193,7,.35);
+}
+.card.servicio .card-title{
+  color:#ffc107;
+  font-size:clamp(1.05rem, 1vw + .8rem, 1.25rem);
+  font-weight:700; margin-bottom:.35rem;
+}
+.card.servicio .card-text{ color:#ddd; line-height:1.5; }
+.card.servicio .badge-precio{
+  align-self:flex-start;
+  border:1px solid #ffc107;
+  background:#0f0f0f; color:#ffc107; font-weight:600;
+}
+
+/* Sello rojo “Promo” para cards (Home/Servicios) */
+.promo-badge{
+  position:absolute; top:10px; left:10px; z-index:2;
+  background:#dc3545; color:#fff; font-weight:700;
+  font-size:.85rem; padding:.35rem .6rem; border-radius:.4rem;
+  box-shadow:0 2px 8px rgba(0,0,0,.3);
+}
+.promo-badge.pill{ border-radius:999px; } /* versión pastilla */
+
+/* =========================================================
+   5) Carousel (Home)
+   ========================================================= */
+.carousel .carousel-item img{
+  height:clamp(240px, 40vw, 520px);
+  object-fit:cover; object-position:center left; /* enfoca a la izq si tu imagen lo necesita */
+  filter:contrast(1.05) saturate(1.05);
+}
+.carousel-indicators [data-bs-target]{ background:var(--primary); }
+
+/* =========================================================
+   6) Galería (galeria.html con Vue)
+   ========================================================= */
+.gallery-grid{
+  display:grid; grid-template-columns:repeat(2,1fr); gap:.75rem;
+}
+@media (min-width:768px){ .gallery-grid{ grid-template-columns:repeat(3,1fr); } }
+@media (min-width:1200px){ .gallery-grid{ grid-template-columns:repeat(4,1fr); } }
+
+.gallery-grid a{ position:relative; overflow:hidden; border-radius:.5rem; }
+.gallery-grid img{
+  width:100%; height:220px; object-fit:cover;
+  border-radius:.5rem; box-shadow:var(--shadow);
+}
+.gallery-grid a::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(to top, rgba(0,0,0,.45), rgba(0,0,0,0));
+  opacity:0; transition:opacity .25s;
+}
+.gallery-grid a:hover::after{ opacity:1; }
+
+/* =========================================================
+   7) Multimedia (multimedia.html)
+   ========================================================= */
+video,audio{
+  width:100%; outline:none; border-radius:.5rem;
+  box-shadow:var(--shadow); background:#000;
+}
+
+/* =========================================================
+   8) Mapa / Ubicación (ubicacion.html + Google Maps)
+   ========================================================= */
+#map{
+  width:100%;
+  height: clamp(300px, 50vh, 520px);
+  border-radius:.75rem;
+  box-shadow:var(--shadow);
+}
+.coords{ color:var(--text-200); font-size:.95rem; }
+
+/* =========================================================
+   9) Formularios (contacto.html y modal reservas en index)
+   ========================================================= */
+.form-control,.form-select{
+  background:#0f0f0f; border-color:#222; color:var(--text-100);
+}
+.form-control:focus,.form-select:focus{
+  border-color:var(--primary);
+  box-shadow:0 0 0 .2rem rgba(244,180,0,.25);
+}
+::placeholder{ color:#9aa4b2; }
+
+/* =========================================================
+   10) Footer (todas las páginas)
+   ========================================================= */
+footer{ background:var(--bg-200); border-top:1px solid var(--border); }
+
+/* =========================================================
+   11) Sección “servicios” (estilos auxiliareses )
+   ========================================================= */
+.hero-servicios{
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.7)),
+    url("assets/img/galeria/hero-bg.jpg") center/cover no-repeat;
+  border-bottom:1px solid #f5c54244;
+}
+.servicio.card{ background:#0e0e0e; border:1px solid rgba(245,197,66,.35); }
+.servicio .card-title{ color:#f5c542; }
+.badge-precio{ border:1px solid #f5c542; color:#f5c542; background:transparent; }
+.chip{
+  border:1px dashed rgba(245,197,66,.45);
+  color:#f5c542; padding:.4rem .7rem; border-radius:999px; font-size:.9rem;
+}
+.icon-circle{
+  width:48px; height:48px; border-radius:50%;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:#111; border:1px solid rgba(245,197,66,.35); color:#f5c542;
+}
+.list-check i{ color:#24c17c; }
+
+/* =========================================================
+   12) FAQ / Acordeón (si lo usas en servicios.html)
+   ========================================================= */
+.faq .accordion-button{ background:#0f0f0f; color:#fff; }
+.faq .accordion-item{ border-color:rgba(245,197,66,.25); }
+
+/* =========================================================
+   13) Accesibilidad / Motion
+   ========================================================= */
+@media (prefers-reduced-motion:reduce){
+  .card.servicio{ transition:none; }
+  .card.servicio:hover{ transform:none; box-shadow:none; }
+}
+
+/* =========================================================
+   14) Micro-responsivo (pequeños ajustes)
+   ========================================================= */
+@media (max-width:575.98px){
+  .section-title{ margin-bottom:1.25rem; }
+  .card.servicio{ border-width:1.6px; }
+  .card.servicio .card-text{ font-size:.95rem; }
+}
+@media (min-width:576px) and (max-width:767.98px){
+  .card.servicio .card-img-top{ height: clamp(180px, 28vw, 260px); }
+}
+@media (min-width:768px) and (max-width:991.98px){
+  .card.servicio .card-text{ font-size:1rem; }
+}
+@media (min-width:992px){
+  .card.servicio{ border-radius:14px; }
+  .card.servicio .card-img-top{ height: clamp(200px, 20vw, 280px); }
+}
+
+/* Chapita simple para oferta (antes .promo-badge) */
+.oferta-badge{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  background: #dc3545;
+  color: #fff;
+  font-weight: 700;
+  font-size: .85rem;
+  padding: .35rem .6rem;
+  border-radius: .4rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.3);
+}
+.oferta-badge.pill { border-radius: 999px; }
+/* ---- Imágenes de tarjetas (Home, Menú, etc.) ---- */
+.card.h-100 > .card-img-top,
+.card .card-img-top {
+  display: block !important;
+  width: 100% !important;
+  height: 220px !important;          /* alto uniforme */
+  object-fit: cover !important;       /* recorta sin deformar */
+  object-position: center !important; /* centra el encuadre */
+  border-top-left-radius: 0.5rem !important;
+  border-top-right-radius: 0.5rem !important;
+}
+
+/* Home: “Reserva / Cotiza” y “Destacado de la semana”
+   por si en algún momento no tuvieran la clase por JS/HTML */
+#cardReserva img,
+#cardDestacado img,
+#featured-img {
+  display: block !important;
+  width: 100% !important;
+  height: 220px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+/* Móvil: un poco más bajitas */
+@media (max-width: 576px) {
+  .card.h-100 > .card-img-top,
+  .card .card-img-top,
+  #cardReserva img,
+  #cardDestacado img,
+  #featured-img {
+    height: 170px !important;
+  }
+}
